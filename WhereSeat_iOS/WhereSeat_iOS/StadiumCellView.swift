@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct StadiumCellView: View {
-    let stadium: Stadium
+    var stadium: StadiumModel
     
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
                 Rectangle()
-                    .foregroundColor(.blue)
+                    .foregroundColor(.clear)
                     .frame(width: 327, height: 172)
-                
+                    .background(.white)
                     .cornerRadius(10)
-                    .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 4)
+                    .shadow(color: .black.opacity(0.50), radius: 2.5)
             }
             Rectangle()
                 .foregroundColor(.clear)
