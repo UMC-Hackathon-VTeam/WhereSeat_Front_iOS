@@ -25,6 +25,7 @@
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
 		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
 		882556F92A530A11006006B4 /* SeatSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882556F82A530A11006006B4 /* SeatSelectView.swift */; };
+		88958D712A52DE600039CDD7 /* SeatSelectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D702A52DE600039CDD7 /* SeatSelectAlert.swift */; };
 		3B4763582A52EC1D00193005 /* WrittenDiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763572A52EC1D00193005 /* WrittenDiaryListViewController.swift */; };
 		3B47635A2A53130F00193005 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763592A53130F00193005 /* Extension.swift */; };
 		3B47635C2A53235D00193005 /* WrittenDiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635B2A53235D00193005 /* WrittenDiaryModel.swift */; };
