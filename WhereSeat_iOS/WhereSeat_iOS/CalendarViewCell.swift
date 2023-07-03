@@ -27,36 +27,52 @@ final class CalendarViewCell: FSCalendarCell{
         return label
     }()
         
+    // MARK:
+    private lazy var selectView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 20
+        return view
+    }()
     
     // MARK:
     private func addUI(){
-        addSubview(title)
+//        addSubview(title)
+        addSubview(selectView)
         
-        title.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.centerX.equalToSuperview()
+//        title.snp.makeConstraints { make in
+//            make.bottom.equalToSuperview()
+//            make.centerX.equalToSuperview()
+//        }
+        selectView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalToSuperview()
         }
     }
     
     func inputData(text: String){
         addUI()
-        let attributedString = NSMutableAttributedString(string: "")
-        let imageAttachment = NSTextAttachment()
         
+        selectView.backgroundColor = .cyan
         
-        if text == "O"{
-            imageAttachment.image = UIImage(systemName: "circle")
-            attributedString.append(NSAttributedString(attachment: imageAttachment))
-            title.attributedText = attributedString
-        }
-        else if text == "X"{
-            imageAttachment.image = UIImage(systemName: "xmark")
-            attributedString.append(NSAttributedString(attachment: imageAttachment))
-            title.attributedText = attributedString
-        }
-        else{
-            attributedString.append(NSAttributedString(string: " "))
-            title.attributedText = attributedString
-        }
+//        let attributedString = NSMutableAttributedString(string: "")
+//        let imageAttachment = NSTextAttachment()
+        
+//
+//        if text == "O"{
+//            imageAttachment.image = UIImage(systemName: "circle")
+//            attributedString.append(NSAttributedString(attachment: imageAttachment))
+//            title.attributedText = attributedString
+//        }
+//        else if text == "X"{
+//            imageAttachment.image = UIImage(systemName: "xmark")
+//            attributedString.append(NSAttributedString(attachment: imageAttachment))
+//            title.attributedText = attributedString
+//        }
+//        else{
+//            attributedString.append(NSAttributedString(string: " "))
+//            title.attributedText = attributedString
+//        }
     }
 }
