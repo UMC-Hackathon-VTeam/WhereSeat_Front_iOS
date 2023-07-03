@@ -19,11 +19,11 @@
                         <viewLayoutGuide key="safeArea" id="KpN-ur-cb1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="캘린더" image="CalendarUnSelect" selectedImage="CalendarSelect" id="C2S-sy-Ujy"/>
+                    <navigationItem key="navigationItem" id="5b8-6y-gkC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKX-HS-eHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="39"/>
+            <point key="canvasLocation" x="1402.2900763358778" y="38.732394366197184"/>
         </scene>
         <!--홈-->
         <scene sceneID="kka-A7-nvc">
@@ -72,12 +72,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="rhA-GX-44L" kind="relationship" relationship="viewControllers" id="aEF-ya-gyf"/>
-                        <segue destination="FVf-dW-oqe" kind="relationship" relationship="viewControllers" id="0mI-ma-eSb"/>
+                        <segue destination="u4q-wv-wJi" kind="relationship" relationship="viewControllers" id="0mI-ma-eSb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9m-qI-7kc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-429" y="-382"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="9GL-p6-8mm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u4q-wv-wJi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" image="calendar" catalog="system" id="C2S-sy-Ujy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GGo-nm-QbS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FVf-dW-oqe" kind="relationship" relationship="rootViewController" id="Llo-Cq-7Ri"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dE9-Ve-MFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.57251908396944" y="38.732394366197184"/>
         </scene>
     </scenes>
     <resources>
