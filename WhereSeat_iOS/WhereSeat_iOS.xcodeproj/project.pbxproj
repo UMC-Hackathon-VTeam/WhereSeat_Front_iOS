@@ -18,6 +18,10 @@
 		3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3B47634D2A52B8A300193005 /* FSCalendar */; };
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
 		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
+		88958D712A52DE600039CDD7 /* SeatSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D702A52DE600039CDD7 /* SeatSelectView.swift */; };
+		88958D732A52DE910039CDD7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D722A52DE910039CDD7 /* Model.swift */; };
+		88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D742A52DF600039CDD7 /* HomeViewModel.swift */; };
+		88958D772A52DFB00039CDD7 /* StadiumCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D762A52DFB00039CDD7 /* StadiumCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		282C61702A52B5B90017FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C61782A52B67E0017FB4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		282C617A2A52D0040017FB4C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		88958D702A52DE600039CDD7 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
+		88958D722A52DE910039CDD7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		88958D742A52DF600039CDD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		88958D762A52DFB00039CDD7 /* StadiumCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +77,16 @@
 				282C61622A52B5B80017FB4C /* AppDelegate.swift */,
 				282C61642A52B5B80017FB4C /* SceneDelegate.swift */,
 				282C61662A52B5B80017FB4C /* HomeViewController.swift */,
-				282C617A2A52D0040017FB4C /* HomeView.swift */,
 				282C61782A52B67E0017FB4C /* CalendarViewController.swift */,
 				282C61682A52B5B80017FB4C /* Main.storyboard */,
 				282C616B2A52B5B90017FB4C /* Assets.xcassets */,
 				282C616D2A52B5B90017FB4C /* LaunchScreen.storyboard */,
 				282C61702A52B5B90017FB4C /* Info.plist */,
+				282C617A2A52D0040017FB4C /* HomeView.swift */,
+				88958D702A52DE600039CDD7 /* SeatSelectView.swift */,
+				88958D722A52DE910039CDD7 /* Model.swift */,
+				88958D742A52DF600039CDD7 /* HomeViewModel.swift */,
+				88958D762A52DFB00039CDD7 /* StadiumCellView.swift */,
 			);
 			path = WhereSeat_iOS;
 			sourceTree = "<group>";
@@ -160,11 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88958D772A52DFB00039CDD7 /* StadiumCellView.swift in Sources */,
 				282C61792A52B67E0017FB4C /* CalendarViewController.swift in Sources */,
 				282C61672A52B5B80017FB4C /* HomeViewController.swift in Sources */,
 				282C61632A52B5B80017FB4C /* AppDelegate.swift in Sources */,
+				88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */,
+				88958D732A52DE910039CDD7 /* Model.swift in Sources */,
 				282C617B2A52D0040017FB4C /* HomeView.swift in Sources */,
 				282C61652A52B5B80017FB4C /* SceneDelegate.swift in Sources */,
+				88958D712A52DE600039CDD7 /* SeatSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B2BVUS6X5N;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhereSeat_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -339,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B2BVUS6X5N;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhereSeat_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

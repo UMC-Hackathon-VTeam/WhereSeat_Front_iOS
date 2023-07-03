@@ -3,12 +3,13 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--캘린더-->
         <scene sceneID="xuo-5L-o0Y">
             <objects>
                 <viewController id="FVf-dW-oqe" customClass="CalendarViewController" customModule="WhereSeat_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +19,13 @@
                         <viewLayoutGuide key="safeArea" id="KpN-ur-cb1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="calendar" catalog="system" id="C2S-sy-Ujy"/>
+                    <tabBarItem key="tabBarItem" title="캘린더" image="CalendarUnSelect" selectedImage="CalendarSelect" id="C2S-sy-Ujy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKX-HS-eHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477" y="39"/>
         </scene>
-        <!--Item 1-->
+        <!--홈-->
         <scene sceneID="kka-A7-nvc">
             <objects>
                 <viewController id="rhA-GX-44L" customClass="HomeViewController" customModule="WhereSeat_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +44,9 @@
                         <viewLayoutGuide key="safeArea" id="Z8g-ca-jE4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="house.fill" catalog="system" id="4wZ-ZW-5fL"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="HomeUnSelect" selectedImage="HomeSelect" id="4wZ-ZW-5fL">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n3-zv-G0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +67,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hqC-7f-o0S">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.91372549530000002" green="0.91372549530000002" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.55686274509803924" green="0.32156862745098036" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="rhA-GX-44L" kind="relationship" relationship="viewControllers" id="aEF-ya-gyf"/>
@@ -77,8 +81,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="CalendarSelect" width="24" height="24"/>
+        <image name="CalendarUnSelect" width="24" height="24"/>
+        <image name="HomeSelect" width="24" height="24"/>
+        <image name="HomeUnSelect" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
