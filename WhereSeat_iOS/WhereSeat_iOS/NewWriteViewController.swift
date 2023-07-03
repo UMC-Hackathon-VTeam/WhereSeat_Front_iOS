@@ -147,10 +147,17 @@ final class NewWriteViewController: UIViewController {
     @objc
     private func clickedDoneBtn(){
         
-        if !(imgBtn.imageView?.image?.isEqual(UIImage(named: "기본 사진")) ?? true){
+        if !(imgBtn.imageView?.image?.isEqual(UIImage(named: "기본 사진")) ?? true) && titleTextField.text != ""{
             let alert = UIAlertController(title: "일기 등록 완료!", message: "등록이 완료되었습니다.", preferredStyle: .alert)
             let action = UIAlertAction(title: "확인", style: .default, handler: {_ in
                 self.navigationController?.popViewController(animated: true)
+                
+                guard let title = self.titleTextField.text else { return }
+                guard let image = self.imgBtn.imageView?.image else { return }
+                let description = self.titleTextField.text ?? ""
+                
+                
+                
             })
             
             alert.addAction(action)
