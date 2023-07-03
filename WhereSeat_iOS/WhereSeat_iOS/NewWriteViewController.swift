@@ -167,8 +167,9 @@ final class NewWriteViewController: UIViewController {
                 guard let title = self.titleTextField.text else { return }
                 guard let image = self.imgBtn.imageView?.image else { return }
                 let description = self.titleTextField.text ?? ""
+                guard let time = self.selectDate?.split(separator: " ")[0] else{ return}
                 
-                
+                DiaryService.service.inputData(data: DiaryModel(image: "Review", visitedAt: "\(String(describing: time))", comment: title,description: description))
                 
             })
             

@@ -12,17 +12,16 @@ import SnapKit
 final class CalendarViewController: UIViewController {
     private var diaryDateList: [String] = []
     private var check: Bool = true
-    private let service = DiaryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
-        service.getWrittenDiaryList(completion: getData(data:))
+        
         addUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        DiaryService.service.getWrittenDiaryList(completion: getData(data:))
         navigationController?.navigationBar.isHidden = true
         
     }
@@ -165,7 +164,7 @@ final class CalendarViewController: UIViewController {
         dateComponents.month = next ? 1 : -1
         currentPage = Calendar.current.date(byAdding: dateComponents, to: currentPage)!
         calendarView.setCurrentPage(currentPage, animated: true)
-        service.getWrittenDiaryList(completion: getData(data:))
+        DiaryService.service.getWrittenDiaryList(completion: getData(data:))
     }
     
     
@@ -176,8 +175,7 @@ final class CalendarViewController: UIViewController {
         data.forEach { date in
             diaryDateList.append(date)
         }
-      
-        print("??????")
+        print(diaryDateList)
         self.calendarView.reloadData()
         
     }
@@ -222,8 +220,6 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     // MARK: 선택된 기본 색상 지정
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
         let date = formattingDate(date: date).split(separator: " ")[0]
-        
-        
         
         if !self.diaryDateList.filter({date == $0}).isEmpty{
             return #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)

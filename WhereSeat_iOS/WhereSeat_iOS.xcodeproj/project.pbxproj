@@ -32,6 +32,7 @@
 		3B4763632A533D7200193005 /* DiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763622A533D7200193005 /* DiaryService.swift */; };
 		3B6BC3D22A5346CC00EADB8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BC3D12A5346CC00EADB8D /* LoginViewController.swift */; };
 		3B6BC3D42A534D9600EADB8D /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BC3D32A534D9600EADB8D /* CreateNewViewController.swift */; };
+		3B6BC3D62A536A2100EADB8D /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BC3D52A536A2100EADB8D /* DiaryModel.swift */; };
 		88958D712A52DE600039CDD7 /* SeatSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D702A52DE600039CDD7 /* SeatSelectView.swift */; };
 		88958D732A52DE910039CDD7 /* StadiumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D722A52DE910039CDD7 /* StadiumModel.swift */; };
 		88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D742A52DF600039CDD7 /* HomeViewModel.swift */; };
@@ -67,6 +68,7 @@
 		3B4763622A533D7200193005 /* DiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryService.swift; sourceTree = "<group>"; };
 		3B6BC3D12A5346CC00EADB8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6BC3D32A534D9600EADB8D /* CreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
+		3B6BC3D52A536A2100EADB8D /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
 		88958D702A52DE600039CDD7 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
 		88958D722A52DE910039CDD7 /* StadiumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumModel.swift; sourceTree = "<group>"; };
 		88958D742A52DF600039CDD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4763622A533D7200193005 /* DiaryService.swift */,
+				3B6BC3D52A536A2100EADB8D /* DiaryModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				3B6BC3D42A534D9600EADB8D /* CreateNewViewController.swift in Sources */,
 				3B6BC3D22A5346CC00EADB8D /* LoginViewController.swift in Sources */,
 				3B47635A2A53130F00193005 /* Extension.swift in Sources */,
+				3B6BC3D62A536A2100EADB8D /* DiaryModel.swift in Sources */,
 				282C618F2A53025C0017FB4C /* AddReviewView.swift in Sources */,
 				88E266012A536BD000BF79CB /* SeatViewModel.swift in Sources */,
 				282C618B2A52EDE20017FB4C /* ReviewListViewModel.swift in Sources */,

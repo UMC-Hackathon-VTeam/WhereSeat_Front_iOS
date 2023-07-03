@@ -9,11 +9,29 @@ import Foundation
 import Alamofire
 
 final class DiaryService{
+    static let service = DiaryService()
+    private init() {}
+    
+    private var dataList: [DiaryModel] = []
     
     func getWrittenDiaryList( completion: @escaping ([String]) -> ()){
-//        let url = 
-        print("hi")
-        completion(["2023-07-10","2023-07-11","2023-07-13"])
+        var list: [String] = []
+        dataList.forEach { data in
+            list.append(data.visitedAt)
+        }
+        
+        completion(list)
     }
     
+    func findData(time: String, completion: @escaping (DiaryModel) -> ()){
+        
+        let model =  dataList.filter { data in
+            data.visitedAt == time
+        }
+        completion(model[0])
+    }
+    
+    func inputData(data: DiaryModel){
+        dataList.append(data)
+    }
 }

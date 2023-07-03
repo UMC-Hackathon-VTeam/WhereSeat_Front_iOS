@@ -28,6 +28,8 @@ final class WrittenDiaryListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+        guard let time = selectDate?.split(separator: " ")[0] else {return}
+        DiaryService.service.findData(time: String(time), completion: getData)
     }
 
     // MARK:
@@ -206,6 +208,18 @@ final class WrittenDiaryListViewController: UIViewController {
         
         self.present(actionSheet, animated: true, completion: nil)
     }
+    
+    private func getData(data: DiaryModel){
+        print("data \(data)")
+        guard let img = data.image else {return}
+
+        self.imgBtn.setImage(UIImage(named: img)?.resize(newWidth: view.safeAreaLayoutGuide.layoutFrame.width), for: .normal)
+        self.imgBtn.setImage(UIImage(named: img)?.resize(newWidth: view.safeAreaLayoutGuide.layoutFrame.width), for: .disabled)
+        
+        titleTextField.text = data.comment ?? ""
+        diaryTextField.text = data.description ?? ""
+    }
+    
     
 }
 
