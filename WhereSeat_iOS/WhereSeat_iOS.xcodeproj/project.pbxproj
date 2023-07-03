@@ -17,6 +17,7 @@
 		3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3B47634D2A52B8A300193005 /* FSCalendar */; };
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
 		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
+		3B4763562A52D27000193005 /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763552A52D27000193005 /* CalendarViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		282C616E2A52B5B90017FB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		282C61702A52B5B90017FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C61782A52B67E0017FB4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3B4763552A52D27000193005 /* CalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				282C61642A52B5B80017FB4C /* SceneDelegate.swift */,
 				282C61662A52B5B80017FB4C /* HomeViewController.swift */,
 				282C61782A52B67E0017FB4C /* CalendarViewController.swift */,
+				3B4763552A52D27000193005 /* CalendarViewCell.swift */,
 				282C61682A52B5B80017FB4C /* Main.storyboard */,
 				282C616B2A52B5B90017FB4C /* Assets.xcassets */,
 				282C616D2A52B5B90017FB4C /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				282C61672A52B5B80017FB4C /* HomeViewController.swift in Sources */,
 				282C61632A52B5B80017FB4C /* AppDelegate.swift in Sources */,
 				282C61652A52B5B80017FB4C /* SceneDelegate.swift in Sources */,
+				3B4763562A52D27000193005 /* CalendarViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
