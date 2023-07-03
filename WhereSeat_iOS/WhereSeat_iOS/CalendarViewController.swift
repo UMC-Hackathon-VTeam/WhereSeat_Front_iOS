@@ -6,24 +6,71 @@
 //
 
 import UIKit
+import FSCalendar
+import SnapKit
 
-class CalendarViewController: UIViewController {
-
+final class CalendarViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        
+        addUI()
     }
     
+    // MARK:
+    private lazy var calendarView: FSCalendar = {
+        let cal = FSCalendar()
+        cal.locale = Locale(identifier: "ko_KR")
+        cal.scope = .month
+        cal.scrollEnabled = true
+        
+        cal.scrollDirection = .vertical
+        cal.appearance.titleWeekendColor = .red    // 주말
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        return cal
+    }()
+    
+    
+    // MARK:
+    private func addUI(){
+        view.addSubview(calendarView)
+        
+        calendarView.delegate = self
+        calendarView.dataSource = self
+        
+        setAutoLayout()
     }
-    */
+    
+    // MARK:
+    private func setAutoLayout(){
+        calendarView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+    }
+    
+    
+    // MARK:
+    private func formattingDate(date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:MM"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        return dateFormatter.string(from: date)
+    }
+    
+}
 
+extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource{
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(date)
+        
+        print(formattingDate(date: date))
+    }
+    
+    // 날짜 선택 해제 콜백 메소드
+    public func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//        let dateFormatter = DateFormatter()
+//        print(dateFormatter.string(from: date) + " 날짜가 선택 해제 되었습니다.")
+    }
 }
