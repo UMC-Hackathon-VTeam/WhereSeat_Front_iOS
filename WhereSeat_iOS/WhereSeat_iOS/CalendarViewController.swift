@@ -11,18 +11,20 @@ import SnapKit
 
 final class CalendarViewController: UIViewController {
     private var diaryDateList: [String] = []
+    private var check: Bool = true
+    private let service = DiaryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
-        
+        service.getWrittenDiaryList(completion: getData(data:))
         addUI()
-        getData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         navigationController?.navigationBar.isHidden = true
+        
     }
     
     // MARK:
@@ -68,7 +70,7 @@ final class CalendarViewController: UIViewController {
         let cal = FSCalendar()
         cal.backgroundColor = .white
         cal.scope = .month
-        cal.scrollEnabled = true
+        cal.scrollEnabled = false
         cal.scrollDirection = .vertical
         
         cal.appearance.weekdayTextColor = .black
@@ -163,14 +165,19 @@ final class CalendarViewController: UIViewController {
         dateComponents.month = next ? 1 : -1
         currentPage = Calendar.current.date(byAdding: dateComponents, to: currentPage)!
         calendarView.setCurrentPage(currentPage, animated: true)
+        service.getWrittenDiaryList(completion: getData(data:))
     }
     
+    
+    
     // MARK:
-    private func getData(){
-        for i in 10...18{
-            diaryDateList.append("2023-07-\(i)")
+    private func getData(data: [String]){
+        diaryDateList = []
+        data.forEach { date in
+            diaryDateList.append(date)
         }
-        
+      
+        print("??????")
         self.calendarView.reloadData()
         
     }
@@ -216,13 +223,17 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
         let date = formattingDate(date: date).split(separator: " ")[0]
         
+        
+        
         if !self.diaryDateList.filter({date == $0}).isEmpty{
             return #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         else{
             return .white
         }
+        
+        
     }
-
+    
     
 }

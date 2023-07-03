@@ -18,7 +18,7 @@ final class WrittenDiaryListViewController: UIViewController {
         view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
 
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis")?.rotate(degrees: 90),
                                                                      menu: menu)
         seperateDate()
         setKeyboardObserver()
@@ -175,7 +175,7 @@ final class WrittenDiaryListViewController: UIViewController {
     // MARK:
     @objc
     private func clickedInsertBtn(){
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis")?.rotate(degrees: 90),
                                                                      menu: menu)
         self.diaryTextField.isEnabled = false
         self.diaryTextField.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
