@@ -32,11 +32,11 @@
 		3B47635E2A53240B00193005 /* NewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635D2A53240B00193005 /* NewWriteViewController.swift */; };
 		3B4763602A532C2400193005 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635F2A532C2400193005 /* PaddingTextField.swift */; };
 		3B4763632A533D7200193005 /* DiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763622A533D7200193005 /* DiaryService.swift */; };
+		3B6BC3D22A5346CC00EADB8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BC3D12A5346CC00EADB8D /* LoginViewController.swift */; };
+		3B6BC3D42A534D9600EADB8D /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BC3D32A534D9600EADB8D /* CreateNewViewController.swift */; };
 		88958D732A52DE910039CDD7 /* StadiumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D722A52DE910039CDD7 /* StadiumModel.swift */; };
 		88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D742A52DF600039CDD7 /* HomeViewModel.swift */; };
 		88958D772A52DFB00039CDD7 /* StadiumCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D762A52DFB00039CDD7 /* StadiumCellView.swift */; };
-		88C01ECE2A533EDF006E4FBF /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C01ECD2A533EDF006E4FBF /* SeatModel.swift */; };
-		88C01ED02A533F5D006E4FBF /* SeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C01ECF2A533F5D006E4FBF /* SeatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,26 +49,25 @@
 		282C616E2A52B5B90017FB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		282C61702A52B5B90017FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C61782A52B67E0017FB4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		282C617A2A52D0040017FB4C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		282C61822A52DC740017FB4C /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		282C61862A52DD0F0017FB4C /* ReviewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewContentView.swift; sourceTree = "<group>"; };
+		282C61882A52DD880017FB4C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		282C618A2A52EDE20017FB4C /* ReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
+		282C618E2A53025C0017FB4C /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
+		282C61902A5318DF0017FB4C /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		3B4763572A52EC1D00193005 /* WrittenDiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenDiaryListViewController.swift; sourceTree = "<group>"; };
 		3B4763592A53130F00193005 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3B47635B2A53235D00193005 /* WrittenDiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenDiaryModel.swift; sourceTree = "<group>"; };
 		3B47635D2A53240B00193005 /* NewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteViewController.swift; sourceTree = "<group>"; };
 		3B47635F2A532C2400193005 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		3B4763622A533D7200193005 /* DiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryService.swift; sourceTree = "<group>"; };
-		282C617A2A52D0040017FB4C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		282C61822A52DC740017FB4C /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
-		282C61862A52DD0F0017FB4C /* ReviewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewContentView.swift; sourceTree = "<group>"; };
-		282C61882A52DD880017FB4C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		282C618A2A52EDE20017FB4C /* ReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
-		882556F82A530A11006006B4 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
-		88958D702A52DE600039CDD7 /* SeatSelectAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectAlert.swift; sourceTree = "<group>"; };
-		282C618E2A53025C0017FB4C /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
-		282C61902A5318DF0017FB4C /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		3B6BC3D12A5346CC00EADB8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B6BC3D32A534D9600EADB8D /* CreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
+		88958D702A52DE600039CDD7 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
 		88958D722A52DE910039CDD7 /* StadiumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumModel.swift; sourceTree = "<group>"; };
 		88958D742A52DF600039CDD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		88958D762A52DFB00039CDD7 /* StadiumCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumCellView.swift; sourceTree = "<group>"; };
-		88C01ECD2A533EDF006E4FBF /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
-		88C01ECF2A533F5D006E4FBF /* SeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,16 +119,15 @@
 				282C61902A5318DF0017FB4C /* StarView.swift */,
 				282C61882A52DD880017FB4C /* Review.swift */,
 				282C61682A52B5B80017FB4C /* Main.storyboard */,
+				3B6BC3D32A534D9600EADB8D /* CreateNewViewController.swift */,
+				3B6BC3D12A5346CC00EADB8D /* LoginViewController.swift */,
 				3B4763612A533D1800193005 /* Services */,
 				282C616B2A52B5B90017FB4C /* Assets.xcassets */,
 				282C616D2A52B5B90017FB4C /* LaunchScreen.storyboard */,
 				282C61702A52B5B90017FB4C /* Info.plist */,
 				282C617A2A52D0040017FB4C /* HomeView.swift */,
-				88C01ECF2A533F5D006E4FBF /* SeatViewModel.swift */,
-				882556F82A530A11006006B4 /* SeatSelectView.swift */,
-				88958D702A52DE600039CDD7 /* SeatSelectAlert.swift */,
+				88958D702A52DE600039CDD7 /* SeatSelectView.swift */,
 				88958D722A52DE910039CDD7 /* StadiumModel.swift */,
-				88C01ECD2A533EDF006E4FBF /* SeatModel.swift */,
 				88958D742A52DF600039CDD7 /* HomeViewModel.swift */,
 				88958D762A52DFB00039CDD7 /* StadiumCellView.swift */,
 			);
@@ -235,20 +233,19 @@
 				3B47635E2A53240B00193005 /* NewWriteViewController.swift in Sources */,
 				3B4763602A532C2400193005 /* PaddingTextField.swift in Sources */,
 				3B4763582A52EC1D00193005 /* WrittenDiaryListViewController.swift in Sources */,
+				3B6BC3D42A534D9600EADB8D /* CreateNewViewController.swift in Sources */,
+				3B6BC3D22A5346CC00EADB8D /* LoginViewController.swift in Sources */,
 				3B47635A2A53130F00193005 /* Extension.swift in Sources */,
 				282C618F2A53025C0017FB4C /* AddReviewView.swift in Sources */,
 				282C618B2A52EDE20017FB4C /* ReviewListViewModel.swift in Sources */,
 				282C61872A52DD0F0017FB4C /* ReviewContentView.swift in Sources */,
 				282C61632A52B5B80017FB4C /* AppDelegate.swift in Sources */,
-				88C01ECE2A533EDF006E4FBF /* SeatModel.swift in Sources */,
 				88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */,
 				88958D732A52DE910039CDD7 /* StadiumModel.swift in Sources */,
 				282C617B2A52D0040017FB4C /* HomeView.swift in Sources */,
-				88C01ED02A533F5D006E4FBF /* SeatViewModel.swift in Sources */,
 				282C61832A52DC740017FB4C /* ReviewListView.swift in Sources */,
 				282C61652A52B5B80017FB4C /* SceneDelegate.swift in Sources */,
-				88958D712A52DE600039CDD7 /* SeatSelectAlert.swift in Sources */,
-				882556F92A530A11006006B4 /* SeatSelectView.swift in Sources */,
+				88958D712A52DE600039CDD7 /* SeatSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

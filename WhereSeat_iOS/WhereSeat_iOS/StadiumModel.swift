@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct StadiumModel: Identifiable {
+struct Stadium: Identifiable {
     var id: UUID = UUID()
     let name: String
     let image: String
 }
+
