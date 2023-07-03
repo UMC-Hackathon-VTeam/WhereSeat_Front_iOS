@@ -11,6 +11,7 @@ import SnapKit
 final class NewWriteViewController: UIViewController {
     var selectDate: String?
     private var diaryTextFieldConstraint: Constraint?
+    private let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,11 +135,22 @@ final class NewWriteViewController: UIViewController {
     @objc
     private func clickedImgBtn(){
         
-        /*
-         
-         갤러리 이동 후 사진 선택 해야함
-         
-         */
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "사진 찍기", style: .default, handler: {(ACTION:UIAlertAction) in
+            self.imagePickerController.delegate = self
+            self.imagePickerController.sourceType = .camera
+            self.present(self.imagePickerController, animated: true, completion: nil)
+        }))
+        
+        
+        actionSheet.addAction(UIAlertAction(title: "갤러리에서 불러오기", style: .default, handler: {(ACTION:UIAlertAction) in
+            self.imagePickerController.delegate = self
+            self.imagePickerController.sourceType = .photoLibrary
+            self.present(self.imagePickerController, animated: true, completion: nil)
+        }))
+        
+        self.present(actionSheet, animated: true, completion: nil)
         
         
     }
@@ -167,6 +179,24 @@ final class NewWriteViewController: UIViewController {
     
     
 }
+
+extension NewWriteViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.imgBtn.setImage(image.resize(newWidth: self.imgBtn.frame.width, newHeight: self.imgBtn.frame.height), for: .normal)
+            self.imgBtn.clipsToBounds = true
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
+
+
 
 extension NewWriteViewController {
     func setKeyboardObserver() {
