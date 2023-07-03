@@ -31,6 +31,15 @@
                     <view key="view" contentMode="scaleToFill" id="r4s-w5-aHe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-Fx-fc3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="l0g-Ip-Wcc" kind="embed" destinationCreationSelector="embededSwiftUi:" id="y6t-WW-bBL"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8g-ca-jE4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -38,7 +47,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n3-zv-G0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="-686"/>
+            <point key="canvasLocation" x="551.90839694656484" y="-673.23943661971839"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="7hw-Ni-r1O">
+            <objects>
+                <hostingController id="l0g-Ip-Wcc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vH1-Gb-7uG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="-650"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h0e-Yk-ko5">
