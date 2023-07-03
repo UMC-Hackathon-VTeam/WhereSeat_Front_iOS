@@ -18,7 +18,7 @@ struct ReviewListView: View {
                         ForEach(viewModel.reviewList, id: \.id) { review in
                             NavigationLink(destination: ReviewContentView(review: review)){
                                 ReviewCellView(review: review)
-                                    .padding(5)
+                                    .padding(10)
                             }
                         }
                     }
@@ -39,8 +39,8 @@ struct ReviewListView: View {
                         }
                     }
                 }
-            }
-        }.navigationTitle("블루석")
+            }.navigationTitle("블루석")
+        }
     }
 }
 
@@ -49,7 +49,7 @@ struct ReviewCellView : View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .foregroundColor(.white)
-            .frame(width: 330, height: 172)
+            .frame(height: 172)
             .shadow(radius: 5)
             .overlay(
                 VStack {
@@ -66,7 +66,8 @@ struct ReviewCellView : View {
                                     .font(.system(size: 18))
                                 Spacer()
                             }
-                            StarView(rating: Int(review.score))
+                            .padding(.bottom)
+                            StarView(rating: Int(review.score), size: 12)
                                 .padding(.bottom)
                             Text(review.content)
                             

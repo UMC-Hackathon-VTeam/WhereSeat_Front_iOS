@@ -20,7 +20,7 @@ struct ReviewContentView: View {
                     Text(review.userName)
                         .foregroundColor(.purple)
                     Spacer()
-                    StarView(rating: Int(review.score))
+                    StarView(rating: Int(review.score), size: 18)
                         .padding(.trailing)
                 }
                 HStack{
