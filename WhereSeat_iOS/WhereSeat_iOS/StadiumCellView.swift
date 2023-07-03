@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StadiumCellView: View {
-    let stadium: Stadium
+    let stadium: StadiumModel
     
     var body: some View {
         

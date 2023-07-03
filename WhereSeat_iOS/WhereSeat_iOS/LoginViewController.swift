@@ -17,7 +17,7 @@ final class LoginViewController: UIViewController {
         
         newBtn.layer.borderWidth = 1
         newBtn.layer.cornerRadius = 15
-        newBtn.layer.borderColor = CGColor.init(red: 0, green: 1, blue: 1, alpha: 1)
+        //newBtn.layer.borderColor = CGColor.init(red: 0, green: 1, blue: 1, alpha: 1)
     }
     
     @IBAction func clickedLogin(_ sender: Any) {
