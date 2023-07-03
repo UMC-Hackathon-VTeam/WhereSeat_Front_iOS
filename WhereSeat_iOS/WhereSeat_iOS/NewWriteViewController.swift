@@ -1,28 +1,26 @@
 //
-//  WrittenDiaryListViewController.swift
+//  NewWriteViewController.swift
 //  WhereSeat_iOS
 //
-//  Created by 정호진 on 2023/07/03.
+//  Created by 정호진 on 2023/07/04.
 //
 
 import UIKit
 import SnapKit
 
-final class WrittenDiaryListViewController: UIViewController {
+final class NewWriteViewController: UIViewController {
     var selectDate: String?
     private var diaryTextFieldConstraint: Constraint?
-    private var data: WrittenDiaryModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
 
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),
-                                                                     menu: menu)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "등록", image: nil, target: self, action: #selector(self.clickedDoneBtn))
         seperateDate()
         setKeyboardObserver()
-        getDate()
+        addUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,24 +41,18 @@ final class WrittenDiaryListViewController: UIViewController {
     }()
     
     // MARK:
-    private lazy var titleTextField: PaddedTextField = {
-        let field = PaddedTextField()
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: field.frame.height))
-        field.isEnabled = false
-        field.text = "aaa"
+    private lazy var titleTextField: UITextField = {
+        let field = UITextField()
+        field.placeholder = "제목을 입력해주세요"
         field.font = .boldSystemFont(ofSize: 23)
         field.keyboardType = .default
-        field.leftView = paddingView
-        field.leftViewMode = .always
         return field
     }()
     
     // MARK:
     private lazy var imgBtn: UIButton = {
         let btn = UIButton()
-        btn.isEnabled = false
         btn.setImage(UIImage(named: "11")?.resize(newWidth: view.safeAreaLayoutGuide.layoutFrame.width), for: .normal)
-        btn.setImage(UIImage(named: "11")?.resize(newWidth: view.safeAreaLayoutGuide.layoutFrame.width), for: .disabled)
         btn.addTarget(self, action: #selector(clickedImgBtn), for: .touchUpInside)
         return btn
     }()
@@ -68,37 +60,13 @@ final class WrittenDiaryListViewController: UIViewController {
     // MARK:
     private lazy var diaryTextField: PaddedTextField = {
         let field = PaddedTextField()
-        field.isEnabled = false
-        field.text = "aaa"
-        
+        field.text = "오늘의 스토리는 무엇인가요?"
+        field.backgroundColor = .white
         field.textAlignment = .left
         field.contentVerticalAlignment = .top
+        
         field.padding = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 0)
-
         return field
-    }()
-    
-    private lazy var menuItems: [UIAction] = {
-        return [
-            UIAction(title: "수정",
-                     image: UIImage(systemName: "square.and.arrow.up"),
-                     handler: { _ in
-                         self.diaryTextField.isEnabled = true
-                         self.diaryTextField.backgroundColor = .white
-                         self.imgBtn.isEnabled = true
-                         self.titleTextField.isEnabled = true
-                         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", image: nil, target: self, action: #selector(self.clickedInsertBtn))
-                     }),
-            UIAction(title: "삭제",
-                     image: UIImage(systemName: "trash"),
-                     attributes: .destructive, handler: { _ in
-                         /// 삭제 처리 해야함
-                     }),
-        ]
-    }()
-    
-    private lazy var menu: UIMenu = {
-        return UIMenu(title: "", options: [], children: menuItems)
     }()
     
     // MARK:
@@ -112,6 +80,7 @@ final class WrittenDiaryListViewController: UIViewController {
         
         titleTextField.delegate = self
         diaryTextField.delegate = self
+        
         
         setAutoLayout()
     }
@@ -161,46 +130,42 @@ final class WrittenDiaryListViewController: UIViewController {
         self.navigationItem.title = "\(date) (\(day))"
     }
     
-    
-    // MARK:
-    private func getDate(){
-        data = WrittenDiaryModel(title: "Test!", img: "", description: "testtestsetsetsetests")
-        
-        addUI()
-        titleTextField.text = data?.title
-        diaryTextField.text = data?.description
-        
-    }
-
-    // MARK:
-    @objc
-    private func clickedInsertBtn(){
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),
-                                                                     menu: menu)
-        self.diaryTextField.isEnabled = false
-        self.diaryTextField.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
-        self.imgBtn.isEnabled = false
-        self.titleTextField.isEnabled = false
-    }
-    
-    
     // MARK: 이미지 버튼
     @objc
     private func clickedImgBtn(){
+        
         /*
          
          갤러리 이동 후 사진 선택 해야함
          
          */
+        
+        
     }
+
+    // MARK: 등록 버튼
+    @objc
+    private func clickedDoneBtn(){
+        
+        if !(imgBtn.imageView?.image?.isEqual(UIImage(named: "기본 사진")) ?? true){
+            let alert = UIAlertController(title: "일기 등록 완료!", message: "등록이 완료되었습니다.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "확인", style: .default, handler: {_ in
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
 }
 
-extension WrittenDiaryListViewController {
+extension NewWriteViewController {
     func setKeyboardObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(WrittenDiaryListViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewWriteViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(WrittenDiaryListViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewWriteViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object:nil)
     }
     
     @objc
@@ -230,17 +195,31 @@ extension WrittenDiaryListViewController {
 }
 
  
-extension WrittenDiaryListViewController: UITextFieldDelegate{
+extension NewWriteViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         if textField == titleTextField {
             textField.resignFirstResponder()
             diaryTextField.becomeFirstResponder()
-        } else {
+        }
+        else {
             textField.becomeFirstResponder()
             diaryTextField.resignFirstResponder()
         }
+        
+        
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField == titleTextField {
+            titleTextField.text = ""
+        }
+        else {
+            diaryTextField.text = ""
+        }
+        
+    }
     
 }

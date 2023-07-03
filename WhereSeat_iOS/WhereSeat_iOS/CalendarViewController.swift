@@ -10,13 +10,14 @@ import FSCalendar
 import SnapKit
 
 final class CalendarViewController: UIViewController {
-    
+    private var diaryDateList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0) /* #f8f8f8 */
         
         addUI()
+        getData()
         
     }
     
@@ -136,7 +137,7 @@ final class CalendarViewController: UIViewController {
     // MARK: Change Date -> String
     private func formattingDate(date: Date) -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd E"
         dateFormatter.locale = Locale(identifier: "ko_KR")
         
         return dateFormatter.string(from: date)
@@ -164,6 +165,16 @@ final class CalendarViewController: UIViewController {
         calendarView.setCurrentPage(currentPage, animated: true)
     }
     
+    // MARK:
+    private func getData(){
+        for i in 10...18{
+            diaryDateList.append("2023-07-\(i)")
+        }
+        
+        self.calendarView.reloadData()
+        
+    }
+    
     
 }
 
@@ -172,9 +183,20 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     // MARK: cell을 눌렀을 때
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(formattingDate(date: date))
-        let nextPage = WrittenDiaryListViewController()
-        nextPage.selectDate = formattingDate(date: date)
-        navigationController?.pushViewController(nextPage, animated: true)
+        let stirngDate = formattingDate(date: date).split(separator: " ")[0]
+        
+        if !self.diaryDateList.filter({stirngDate == $0}).isEmpty{
+            let nextPage = WrittenDiaryListViewController()
+            nextPage.selectDate = formattingDate(date: date)
+            navigationController?.pushViewController(nextPage, animated: true)
+        }
+        else{
+            let nextPage = NewWriteViewController()
+            nextPage.selectDate = formattingDate(date: date)
+            navigationController?.pushViewController(nextPage, animated: true)
+        }
+        
+        
     }
     
     // MARK: cell 글씨 색상, (토,일 색상 변경)
@@ -192,19 +214,14 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     
     // MARK: 선택된 기본 색상 지정
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let date = formattingDate(date: date).split(separator: " ")[0]
         
-        let date = formattingDate(date: date)
-        switch date {
-        case "2023-07-22":
-            return #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        case "2023-07-23":
-            return #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
-        case "2023-07-24":
+        if !self.diaryDateList.filter({date == $0}).isEmpty{
             return #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        default:
+        }
+        else{
             return .white
         }
-    
     }
 
     

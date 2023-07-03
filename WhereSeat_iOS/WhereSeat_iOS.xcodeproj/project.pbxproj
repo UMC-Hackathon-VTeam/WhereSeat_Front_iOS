@@ -17,8 +17,11 @@
 		3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3B47634D2A52B8A300193005 /* FSCalendar */; };
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
 		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
-		3B4763562A52D27000193005 /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763552A52D27000193005 /* CalendarViewCell.swift */; };
 		3B4763582A52EC1D00193005 /* WrittenDiaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763572A52EC1D00193005 /* WrittenDiaryListViewController.swift */; };
+		3B47635A2A53130F00193005 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4763592A53130F00193005 /* Extension.swift */; };
+		3B47635C2A53235D00193005 /* WrittenDiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635B2A53235D00193005 /* WrittenDiaryModel.swift */; };
+		3B47635E2A53240B00193005 /* NewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635D2A53240B00193005 /* NewWriteViewController.swift */; };
+		3B4763602A532C2400193005 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B47635F2A532C2400193005 /* PaddingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +34,11 @@
 		282C616E2A52B5B90017FB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		282C61702A52B5B90017FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C61782A52B67E0017FB4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		3B4763552A52D27000193005 /* CalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
 		3B4763572A52EC1D00193005 /* WrittenDiaryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenDiaryListViewController.swift; sourceTree = "<group>"; };
+		3B4763592A53130F00193005 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		3B47635B2A53235D00193005 /* WrittenDiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenDiaryModel.swift; sourceTree = "<group>"; };
+		3B47635D2A53240B00193005 /* NewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteViewController.swift; sourceTree = "<group>"; };
+		3B47635F2A532C2400193005 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +78,11 @@
 				282C61642A52B5B80017FB4C /* SceneDelegate.swift */,
 				282C61662A52B5B80017FB4C /* HomeViewController.swift */,
 				282C61782A52B67E0017FB4C /* CalendarViewController.swift */,
+				3B47635D2A53240B00193005 /* NewWriteViewController.swift */,
 				3B4763572A52EC1D00193005 /* WrittenDiaryListViewController.swift */,
-				3B4763552A52D27000193005 /* CalendarViewCell.swift */,
+				3B47635F2A532C2400193005 /* PaddingTextField.swift */,
+				3B47635B2A53235D00193005 /* WrittenDiaryModel.swift */,
+				3B4763592A53130F00193005 /* Extension.swift */,
 				282C61682A52B5B80017FB4C /* Main.storyboard */,
 				282C616B2A52B5B90017FB4C /* Assets.xcassets */,
 				282C616D2A52B5B90017FB4C /* LaunchScreen.storyboard */,
@@ -164,11 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				282C61792A52B67E0017FB4C /* CalendarViewController.swift in Sources */,
+				3B47635C2A53235D00193005 /* WrittenDiaryModel.swift in Sources */,
 				282C61672A52B5B80017FB4C /* HomeViewController.swift in Sources */,
+				3B47635E2A53240B00193005 /* NewWriteViewController.swift in Sources */,
+				3B4763602A532C2400193005 /* PaddingTextField.swift in Sources */,
 				3B4763582A52EC1D00193005 /* WrittenDiaryListViewController.swift in Sources */,
+				3B47635A2A53130F00193005 /* Extension.swift in Sources */,
 				282C61632A52B5B80017FB4C /* AppDelegate.swift in Sources */,
 				282C61652A52B5B80017FB4C /* SceneDelegate.swift in Sources */,
-				3B4763562A52D27000193005 /* CalendarViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
