@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--캘린더-->
+        <!--Calendar View Controller-->
         <scene sceneID="xuo-5L-o0Y">
             <objects>
                 <viewController id="FVf-dW-oqe" customClass="CalendarViewController" customModule="WhereSeat_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="로그인">
                                             <backgroundConfiguration key="background" cornerRadius="15">
-                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <color key="backgroundColor" red="0.55686274509803924" green="0.32156862745098036" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -281,8 +281,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CalendarSelect" width="24" height="24"/>
-        <image name="CalendarUnSelect" width="24" height="24"/>
         <image name="HomeSelect" width="24" height="24"/>
         <image name="HomeUnSelect" width="24" height="24"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
