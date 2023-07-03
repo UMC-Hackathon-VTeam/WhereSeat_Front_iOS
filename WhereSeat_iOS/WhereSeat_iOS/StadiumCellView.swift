@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StadiumCellView: View {
-    var stadium: Stadium
+    let stadium: Stadium
     
     var body: some View {
         ZStack(alignment: .top) {

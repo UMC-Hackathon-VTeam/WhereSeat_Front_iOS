@@ -13,10 +13,13 @@ struct ReviewListView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                VStack{
-                    ForEach(viewModel.reviewList, id: \.id) { review in
-                        NavigationLink(destination: ReviewContentView(review: review)){
-                            ReviewCellView(review: review)
+                ScrollView{
+                    VStack{
+                        ForEach(viewModel.reviewList, id: \.id) { review in
+                            NavigationLink(destination: ReviewContentView(review: review)){
+                                ReviewCellView(review: review)
+                                    .padding(5)
+                            }
                         }
                     }
                 }
@@ -24,7 +27,7 @@ struct ReviewListView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        Button(action: {}){
+                        NavigationLink(destination: AddReviewView()){
                             ZStack{
                                 Circle().frame(width: 80,height: 80)
                                     .padding()
@@ -37,35 +40,41 @@ struct ReviewListView: View {
                     }
                 }
             }
-        }
+        }.navigationTitle("블루석")
     }
 }
 
 struct ReviewCellView : View {
     let review : Review
     var body: some View {
-        NavigationView {
-            ZStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
-                    .frame(width: 330, height: 172)
-                    .shadow(radius: 5)
+        RoundedRectangle(cornerRadius: 10)
+            .foregroundColor(.white)
+            .frame(width: 330, height: 172)
+            .shadow(radius: 5)
+            .overlay(
                 VStack {
-                    HStack{
+                    HStack {
                         Image(review.image)
+                            .resizable()
                             .frame(width: 122, height: 128)
                             .scaledToFill()
-                            .padding()
-                        VStack{
-                            Text (review.seat)
-                            Text (String(review.score))
+                            .padding(.leading)
+                        VStack(alignment: .leading){
+                            HStack{
+                                Text (review.seat)
+                                    .bold()
+                                    .font(.system(size: 18))
+                                Spacer()
+                            }
+                            StarView(rating: Int(review.score))
+                                .padding(.bottom)
                             Text(review.content)
+                            
                         }
                     }
                 }
-                .foregroundColor(.black)
-            }
-        }.navigationTitle(review.area)
+                    .foregroundColor(.black)
+            )
     }
 }
 

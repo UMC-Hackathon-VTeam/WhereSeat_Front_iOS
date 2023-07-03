@@ -12,19 +12,36 @@ struct ReviewContentView: View {
     var body: some View {
         NavigationView {
             VStack{
-                Image("Review")
+                Image(review.image)
+                    .padding()
                 HStack {
-                    Text("username")
-                    Text("star")
+                    Image("user")
+                        .padding(.leading)
+                    Text(review.userName)
+                        .foregroundColor(.purple)
+                    Spacer()
+                    StarView(rating: Int(review.score))
+                        .padding(.trailing)
                 }
-                Text("리뷰내용")
-                Button(action: {}){
-                    Text("이 게시물 신고하기")
+                HStack{
+                    Text(review.content)
+                        .padding()
+                    Spacer()
+                }
+                Spacer()
+                HStack{
+                    Button(action: {}){
+                        Text("이 리뷰 신고하기")
+                            .foregroundColor(.gray)
+                            .underline()
+                            .padding()
+                    }
                 }
             }
-        }.navigationTitle(review.seat)
+        }.navigationBarTitle(review.seat, displayMode: .inline)
     }
 }
+
 
 struct ReviewContentView_Previews: PreviewProvider {
     static var previews: some View {
