@@ -18,6 +18,10 @@ final class CalendarViewController: UIViewController {
         addUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     // MARK: calenderView를 감싸는 View
     private lazy var outSideView: UIView = {
         let view = UIView()
@@ -103,9 +107,9 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource, FSCa
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
         print(formattingDate(date: date))
-        
+        let nextPage = WrittenDiaryListViewController()
+        navigationController?.pushViewController(nextPage, animated: true)
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
