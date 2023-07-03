@@ -16,6 +16,7 @@
 		282C61792A52B67E0017FB4C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C61782A52B67E0017FB4C /* CalendarViewController.swift */; };
 		3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3B47634D2A52B8A300193005 /* FSCalendar */; };
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
+		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4763542A52CDB200193005 /* Alamofire in Frameworks */,
 				3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */,
 				3B4763512A52B92800193005 /* SnapKit in Frameworks */,
 			);
@@ -93,6 +95,7 @@
 			packageProductDependencies = (
 				3B47634D2A52B8A300193005 /* FSCalendar */,
 				3B4763502A52B92800193005 /* SnapKit */,
+				3B4763532A52CDB200193005 /* Alamofire */,
 			);
 			productName = WhereSeat_iOS;
 			productReference = 282C615F2A52B5B80017FB4C /* WhereSeat_iOS.app */;
@@ -125,6 +128,7 @@
 			packageReferences = (
 				3B47634C2A52B8A300193005 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				3B47634F2A52B92800193005 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3B4763522A52CDB200193005 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 282C61602A52B5B80017FB4C /* Products */;
 			projectDirPath = "";
@@ -392,6 +396,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		3B4763522A52CDB200193005 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -404,6 +416,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B47634F2A52B92800193005 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		3B4763532A52CDB200193005 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B4763522A52CDB200193005 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
