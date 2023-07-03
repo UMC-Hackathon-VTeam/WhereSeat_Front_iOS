@@ -10,6 +10,6 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var stadium: [Stadium] = [
-        Stadium(name: "", image: "TestImage"), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: "")
+        Stadium(name: "고척 스타디움", image: "TestImage"), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: ""), Stadium(name: "", image: "")
     ]
 }

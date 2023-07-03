@@ -19,12 +19,11 @@
 		282C61872A52DD0F0017FB4C /* ReviewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C61862A52DD0F0017FB4C /* ReviewContentView.swift */; };
 		282C61892A52DD880017FB4C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C61882A52DD880017FB4C /* Review.swift */; };
 		282C618B2A52EDE20017FB4C /* ReviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C618A2A52EDE20017FB4C /* ReviewListViewModel.swift */; };
-		282C618D2A52FD170017FB4C /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C618C2A52FD170017FB4C /* AddReviewView.swift */; };
 		3B47634E2A52B8A300193005 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3B47634D2A52B8A300193005 /* FSCalendar */; };
 		3B4763512A52B92800193005 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763502A52B92800193005 /* SnapKit */; };
 		3B4763542A52CDB200193005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B4763532A52CDB200193005 /* Alamofire */; };
 		88958D712A52DE600039CDD7 /* SeatSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D702A52DE600039CDD7 /* SeatSelectView.swift */; };
-		88958D732A52DE910039CDD7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D722A52DE910039CDD7 /* Model.swift */; };
+		88958D732A52DE910039CDD7 /* StadiumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D722A52DE910039CDD7 /* StadiumModel.swift */; };
 		88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D742A52DF600039CDD7 /* HomeViewModel.swift */; };
 		88958D772A52DFB00039CDD7 /* StadiumCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88958D762A52DFB00039CDD7 /* StadiumCellView.swift */; };
 /* End PBXBuildFile section */
@@ -40,15 +39,14 @@
 		282C61702A52B5B90017FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C61782A52B67E0017FB4C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		282C617A2A52D0040017FB4C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		88958D702A52DE600039CDD7 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
-		88958D722A52DE910039CDD7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		88958D742A52DF600039CDD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		88958D762A52DFB00039CDD7 /* StadiumCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumCellView.swift; sourceTree = "<group>"; };
 		282C61822A52DC740017FB4C /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		282C61862A52DD0F0017FB4C /* ReviewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewContentView.swift; sourceTree = "<group>"; };
 		282C61882A52DD880017FB4C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		282C618A2A52EDE20017FB4C /* ReviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
-		282C618C2A52FD170017FB4C /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
+		88958D702A52DE600039CDD7 /* SeatSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectView.swift; sourceTree = "<group>"; };
+		88958D722A52DE910039CDD7 /* StadiumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumModel.swift; sourceTree = "<group>"; };
+		88958D742A52DF600039CDD7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		88958D762A52DFB00039CDD7 /* StadiumCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +86,9 @@
 				282C61642A52B5B80017FB4C /* SceneDelegate.swift */,
 				282C61662A52B5B80017FB4C /* HomeViewController.swift */,
 				282C61782A52B67E0017FB4C /* CalendarViewController.swift */,
-				282C617A2A52D0040017FB4C /* HomeView.swift */,
 				282C61822A52DC740017FB4C /* ReviewListView.swift */,
 				282C618A2A52EDE20017FB4C /* ReviewListViewModel.swift */,
 				282C61862A52DD0F0017FB4C /* ReviewContentView.swift */,
-				282C618C2A52FD170017FB4C /* AddReviewView.swift */,
 				282C61882A52DD880017FB4C /* Review.swift */,
 				282C61682A52B5B80017FB4C /* Main.storyboard */,
 				282C616B2A52B5B90017FB4C /* Assets.xcassets */,
@@ -100,7 +96,7 @@
 				282C61702A52B5B90017FB4C /* Info.plist */,
 				282C617A2A52D0040017FB4C /* HomeView.swift */,
 				88958D702A52DE600039CDD7 /* SeatSelectView.swift */,
-				88958D722A52DE910039CDD7 /* Model.swift */,
+				88958D722A52DE910039CDD7 /* StadiumModel.swift */,
 				88958D742A52DF600039CDD7 /* HomeViewModel.swift */,
 				88958D762A52DFB00039CDD7 /* StadiumCellView.swift */,
 			);
@@ -196,8 +192,7 @@
 				282C61872A52DD0F0017FB4C /* ReviewContentView.swift in Sources */,
 				282C61632A52B5B80017FB4C /* AppDelegate.swift in Sources */,
 				88958D752A52DF600039CDD7 /* HomeViewModel.swift in Sources */,
-				88958D732A52DE910039CDD7 /* Model.swift in Sources */,
-				282C618D2A52FD170017FB4C /* AddReviewView.swift in Sources */,
+				88958D732A52DE910039CDD7 /* StadiumModel.swift in Sources */,
 				282C617B2A52D0040017FB4C /* HomeView.swift in Sources */,
 				282C61832A52DC740017FB4C /* ReviewListView.swift in Sources */,
 				282C61652A52B5B80017FB4C /* SceneDelegate.swift in Sources */,

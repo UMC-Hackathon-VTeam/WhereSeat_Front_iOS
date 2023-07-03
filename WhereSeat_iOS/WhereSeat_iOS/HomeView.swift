@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    var stadium: [Stadium]
+    @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(stadium) { stadium in
+                ForEach(viewModel.stadium) { stadium in
                     NavigationLink(destination: SeatSelectView()) {
                         StadiumCellView(stadium: stadium)
                     }

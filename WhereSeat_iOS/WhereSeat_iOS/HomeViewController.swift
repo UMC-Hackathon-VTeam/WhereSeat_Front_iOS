@@ -9,7 +9,6 @@ import UIKit
 import SwiftUI
 
 class HomeViewController: UIViewController {
-    private var homeViewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +17,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBSegueAction func embededSwiftUi(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: HomeView(stadium: homeViewModel.stadium))
+        return UIHostingController(coder: coder, rootView: HomeView())
         
     }
     
