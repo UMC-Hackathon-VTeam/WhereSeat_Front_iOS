@@ -11,26 +11,17 @@ struct StadiumCellView: View {
     let stadium: Stadium
     
     var body: some View {
-        ZStack(alignment: .top) {
-            VStack {
-                Rectangle()
-                    .foregroundColor(.blue)
-                    .frame(width: 327, height: 172)
-                
-                    .cornerRadius(10)
-                    .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 4)
-            }
-            Rectangle()
-                .foregroundColor(.clear)
+        VStack(spacing: 0){
+            Image(stadium.image)
+                .resizable()
                 .frame(width: 327, height: 133)
-                .background(
-                    Image(stadium.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 327, height: 133)
-                        .clipped()
-                )
-                .cornerRadius(10)
+                .scaledToFit()
+                .shadow(radius: 5)
+                
+            Rectangle()
+                .frame(width: 327, height: 39)
+                .foregroundColor(.white)
+                .overlay(Text(stadium.name).foregroundColor(.black))
         }
     }
 }

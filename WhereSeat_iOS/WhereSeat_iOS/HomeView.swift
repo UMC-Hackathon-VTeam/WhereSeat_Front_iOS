@@ -14,8 +14,9 @@ struct HomeView: View {
         NavigationView {
             ScrollView {
                 ForEach(viewModel.stadium) { stadium in
-                    NavigationLink(destination: SeatSelectView()) {
+                    NavigationLink(destination: ReviewListView()) {
                         StadiumCellView(stadium: stadium)
+                            .padding()
                     }
                 }
             }
@@ -23,10 +24,10 @@ struct HomeView: View {
         }
     }
 }
-/*
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(stadium: <#T##[Stadium]#>)
+        HomeView()
     }
 }
-*/
+

@@ -39,7 +39,7 @@ struct ReviewListView: View {
                         }
                     }
                 }
-            }.navigationTitle("블루석")
+            }.navigationBarTitle("고척 스카이돔",displayMode: .inline)
         }
     }
 }
