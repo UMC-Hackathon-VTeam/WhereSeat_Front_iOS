@@ -19,7 +19,7 @@ struct HomeView: View {
                             .padding()
                     }
                 }
-            }
+            }.navigationTitle("홈")
             .scrollIndicators(.hidden)
         }
     }
