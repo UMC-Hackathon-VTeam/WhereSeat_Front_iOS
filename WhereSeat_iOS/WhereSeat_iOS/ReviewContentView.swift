@@ -18,9 +18,9 @@ struct ReviewContentView: View {
                     Image("user")
                         .padding(.leading)
                     Text(review.userName)
-                        .foregroundColor(.purple)
+                        .foregroundColor(Color("Purple"))
                     Spacer()
-                    StarView(rating: Int(review.score), size: 18)
+                    StarView(rating: Int(review.score), size: 15)
                         .padding(.trailing)
                 }
                 HStack{
@@ -31,10 +31,13 @@ struct ReviewContentView: View {
                 Spacer()
                 HStack{
                     Button(action: {}){
-                        Text("이 리뷰 신고하기")
-                            .foregroundColor(.gray)
-                            .underline()
-                            .padding()
+                        HStack{
+                            Text("이 리뷰 신고하기")
+                                .foregroundColor(.gray)
+                                .underline()
+                                .padding()
+                            Spacer()
+                        }
                     }
                 }
             }

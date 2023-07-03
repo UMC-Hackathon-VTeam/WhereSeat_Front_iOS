@@ -75,7 +75,7 @@ struct AddReviewView: View {
                                 Text("작성 완료하기").foregroundColor(.white)
                             )
                     }
-                    .foregroundColor(.purple)
+                    .foregroundColor(Color("Purple"))
                     .frame(height: 50)
                     .padding()
                 }
@@ -97,7 +97,7 @@ struct RatingView : View {
                ForEach(1...5, id: \.self) { index in
                    Image(systemName: index <= rating ? "star.fill" : "star")
                        .foregroundColor(index <= rating ? .yellow : .gray)
-                       .font(.system(size: 35))
+                       .font(.system(size: 20))
                        .onTapGesture {
                            rating = index
                        }

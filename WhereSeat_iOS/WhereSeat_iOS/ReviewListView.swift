@@ -31,7 +31,7 @@ struct ReviewListView: View {
                             ZStack{
                                 Circle().frame(width: 80,height: 80)
                                     .padding()
-                                    .foregroundColor(.purple)
+                                    .foregroundColor(Color("Purple"))
                                 Image(systemName: "plus")
                                     .font(.system(size: 40))
                                     .foregroundColor(.white)
