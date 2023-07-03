@@ -24,7 +24,7 @@ struct SeatAlertView: View {
                         .frame(width: 220, height: 330)
                         .clipped()
                     NavigationLink {
-                        SeatSelectView()
+                        ReviewListView()// SeatSelectView()
                     } label: {
                         Text("좌석 선택하러 가기")
                             .foregroundColor(.white)
@@ -40,14 +40,15 @@ struct SeatAlertView: View {
                 .padding(.vertical, 20)
                 .padding(.horizontal, 30)
                 .cornerRadius(25)
-                
+                /*
                 Button {
-                    show = false
+                    show.toggle()
                 } label: {
                     Image(systemName: "xmark")
                         .foregroundColor(.black)
                         .padding(.horizontal, 20)
                 }
+                */
             }
             .cornerRadius(20)
         }

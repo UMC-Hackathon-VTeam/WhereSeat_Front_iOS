@@ -9,17 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
+    @State var showingAlert = false
     
     var body: some View {
         NavigationView {
             ScrollView {
                 ForEach(viewModel.stadium) { stadium in
-                    NavigationLink(destination: ReviewListView()) {
+                    NavigationLink(destination: SeatAlertView(show: $showingAlert, stadium: stadium)/*ReviewListView()*/) {
                         StadiumCellView(stadium: stadium)
                             .padding()
                     }
                 }
-            }.navigationTitle("홈")
+            }
+            .navigationTitle("홈")
             .scrollIndicators(.hidden)
         }
     }
