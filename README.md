@@ -9,19 +9,19 @@
 <br>
 <br>
 
-## 🌱 Server Member
-| <img src="https://avatars.githubusercontent.com/u/78026977?v=4" width=75px alt="허영은/아리"/>  | <img src="https://avatars.githubusercontent.com/u/55044278?v=4" width=75px alt="임재영/제이스"/>  | <img src="https://avatars.githubusercontent.com/u/91025314?v=4" width=75px alt="정다연/잉퓨"/>  | 
+## 🌱 iOS Member
+| <img src="https://avatars.githubusercontent.com/u/58204852?v=4"/>  | <img src="https://avatars.githubusercontent.com/u/81843677?v=4"/>  | <img src="https://avatars.githubusercontent.com/u/122873008?v=4"/>  | 
 | :-----: | :-----: | :-----: |
-| [허영은/아리](https://github.com/youngeun-dev) | [임재영/제이스](https://github.com/limjustin)  | [정다연/잉퓨](https://github.com/inpyu) |
+| [김필규/폴](https://github.com/pingu00) | [정호진/해루](https://github.com/HJ39)  | [정보영/드즈](https://github.com/zxcvb2002) |
 <br>
 
 ## 📚 Stack
-- Language - Java 11
-- Framework - Spring Framework (Spring Boot, Spring MVC)
-- Data(RDBMS) - JPA/Hibernate, MySQL
-- Build Tool - Gradle
-- Infra - AWS RDS, AWS S3
-- DB - MySQL(RDS)
+- Language - Swift
+- Build Tool - Xcode
+- Framework - SwiftUI, UIKit (Intergrate using UIHostingViewController)
+- Library - [SnapKit](https://github.com/SnapKit/SnapKit), [FSCalendar](https://github.com/WenchaoD/FSCalendar), Combine
+- Network Library - [Alarmofire](https://github.com/Alamofire/Alamofire)
+- Package Manager - SPM (Swift Package Manager)
 <br>
 
 ## 🔍 서비스 Flowchart
