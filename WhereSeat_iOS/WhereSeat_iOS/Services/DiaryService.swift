@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-final class DiaryService{
+final class DiaryService {
     static let service = DiaryService()
     private init() {}
     
@@ -24,14 +24,14 @@ final class DiaryService{
     }
     
     func findData(time: String, completion: @escaping (DiaryModel) -> ()){
-        
         let model =  dataList.filter { data in
             data.visitedAt == time
         }
+        
         completion(model[0])
     }
     
-    func inputData(data: DiaryModel){
+    func inputData(data: DiaryModel) {
         dataList.append(data)
     }
 }
