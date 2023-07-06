@@ -19,8 +19,7 @@
 - Language - Swift
 - IDE - Xcode
 - Framework - SwiftUI, UIKit (Intergrate using UIHostingViewController)
-- Library - [SnapKit](https://github.com/SnapKit/SnapKit), [FSCalendar](https://github.com/WenchaoD/FSCalendar), Combine
-- Network - [Alarmofire](https://github.com/Alamofire/Alamofire)
+- Library - [SnapKit](https://github.com/SnapKit/SnapKit), [FSCalendar](https://github.com/WenchaoD/FSCalendar), [Alarmofire](https://github.com/Alamofire/Alamofire)
 - Package Manager - SPM (Swift Package Manager)
 <br>
 
