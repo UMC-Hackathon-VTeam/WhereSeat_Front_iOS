@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SeatSelectView: View {
-    @ObservedObject var viewModel = SeatViewModel()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var selectedSeat: SeatModel?
     
+    @ObservedObject var viewModel = SeatViewModel()
+    
     var body: some View {
-        NavigationView {
-            Picker("a", selection: $selectedSeat) {
+        NavigationStack {
+            Picker("", selection: $selectedSeat) {
                 ForEach(viewModel.seat, id: \.self) { option in
                     Text(option.seat).tag(option)
                 }

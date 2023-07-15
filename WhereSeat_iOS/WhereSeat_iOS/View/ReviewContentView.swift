@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ReviewContentView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     let review: Review
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Image(review.image)
                     .padding()

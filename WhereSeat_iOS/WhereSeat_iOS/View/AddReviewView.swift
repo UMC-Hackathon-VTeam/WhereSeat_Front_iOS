@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct AddReviewView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var seatNumber : String = ""
     @State private var rating = 0
     @State var reviewContent : String = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     Spacer()
@@ -86,10 +87,12 @@ struct AddReviewView: View {
                     .frame(height: 50)
                     .padding()
                 }
-                }.background(Color.gray.opacity(0.2)
-                    .edgesIgnoringSafeArea(.all))
-            }.navigationBarTitle("리뷰 작성하기", displayMode: .inline)
+            }
+            .background(Color.gray.opacity(0.2)
+            .edgesIgnoringSafeArea(.all))
         }
+        .navigationBarTitle("리뷰 작성하기", displayMode: .inline)
+    }
     /*
     func saveReview (_ seatNumber : String, _ reviewContent : String) {
         print("save review")

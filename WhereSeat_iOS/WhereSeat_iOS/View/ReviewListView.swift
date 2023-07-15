@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ReviewListView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @ObservedObject var viewModel = ReviewListViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 ScrollView {
                     VStack {
