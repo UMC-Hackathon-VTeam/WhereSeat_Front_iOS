@@ -120,7 +120,7 @@
 				889E8F212A54A466001DA8F7 /* View */,
 				889E8F202A54A45C001DA8F7 /* ViewModel */,
 				889E8F222A54A46C001DA8F7 /* ViewController */,
-				3B4763612A533D1800193005 /* Services */,
+				3B4763612A533D1800193005 /* Service */,
 				889E8F232A54A5A2001DA8F7 /* Extension */,
 				282C61622A52B5B80017FB4C /* AppDelegate.swift */,
 				282C61642A52B5B80017FB4C /* SceneDelegate.swift */,
@@ -133,12 +133,12 @@
 			path = WhereSeat_iOS;
 			sourceTree = "<group>";
 		};
-		3B4763612A533D1800193005 /* Services */ = {
+		3B4763612A533D1800193005 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				3B4763622A533D7200193005 /* DiaryService.swift */,
 			);
-			path = Services;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		889E8F1F2A54A436001DA8F7 /* Model */ = {
@@ -459,7 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 43222PSGBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhereSeat_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 43222PSGBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhereSeat_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

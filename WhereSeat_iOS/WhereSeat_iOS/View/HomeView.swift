@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var showingAlert = false
     
+    @ObservedObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 ForEach(viewModel.stadium) { stadium in
                     NavigationLink(destination: SeatAlertView(show: $showingAlert, stadium: stadium)) {

@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SeatAlertView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @Binding var show: Bool
     
     var stadium: StadiumModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
                 VStack(spacing: 20) {
                     Text(stadium.name)
